@@ -19,6 +19,6 @@ module.exports = {
         port: 3000,
         contentBase: './build',
         inline: true,
-        stats: "errors-only"
+        stats: "normal"
     }
 }
