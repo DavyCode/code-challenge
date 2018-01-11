@@ -74,3 +74,18 @@ const atom = {
   },
 };
 */
+
+
+// Use property value shorthand. 
+// Why? It is shorter to write and descriptive.
+
+/*const lukeSkywalker = 'Luke Skywalker';
+// bad
+const obj = {
+  lukeSkywalker: lukeSkywalker,
+};
+// good
+const obj = {
+  lukeSkywalker,
+};
+*/
