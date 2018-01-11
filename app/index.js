@@ -125,5 +125,5 @@ Introduction
 const newObject = {
   foo: 3,
   bar: 4,
-  'data-blah': 5, //quote invalid identifier
+  'data-blah': 5,  //quote invalid identifier
 };
