@@ -115,3 +115,15 @@ const obj = {
   mayTheFourth: 4,
 };
 */
+
+
+
+// Only quote properties that are invalid identifiers. 
+Why? In general we consider it subjectively easier to read. It improves syntax highlighting, and is also more easily optimized by many JS engines.
+Introduction
+
+const newObject = {
+  foo: 3,
+  bar: 4,
+  'data-blah': 5, //quote invalid identifier
+};
