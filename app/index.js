@@ -119,11 +119,29 @@ const obj = {
 
 
 // Only quote properties that are invalid identifiers. 
-Why? In general we consider it subjectively easier to read. It improves syntax highlighting, and is also more easily optimized by many JS engines.
-Introduction
+// Why? In general we consider it subjectively easier to read. It improves syntax highlighting, and is also more easily optimized by many JS engines.
+// Introduction
 
+/*
 const newObject = {
   foo: 3,
   bar: 4,
-  'data-blah': 5,  //quote invalid identifier
+  'data-blah': 5,  //quote the invalid identifier
 };
+*/
+
+//Scoping es5
+/* 
+function outer() {
+  var a = 1;
+  function inner() {
+    var b = 2;
+  // we can access both `a` and `b` here
+    console.log( a + b ); // 3
+  }
+  inner();
+  // we can only access `a` here
+  console.log( a ); // 1
+}
+outer();   // 1 //3
+*/  
