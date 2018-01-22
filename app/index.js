@@ -4,7 +4,7 @@ console.log("Connected!!!!");
 /* const foo = [1, 2];
     const bar = foo;  //this reference foo to have the value of bar 
     bar[0] = 9;
-    console.log(foo[0], bar[0]);  // 9, 9  // so when we reasign values in a complex data type, we in essence refrence the new state value to the initial value of the first variable being mutated
+    console.log(foo[0], bar[0]);  // 9, 9  // so when we reasign values in a complex data type, we in essence refrence the new state value to  be the value of the initial variable being mutated
 */
 
 // Constant immutability
@@ -21,9 +21,9 @@ console.log("Connected!!!!");
 
 
 //destructuring
-/*const newObj = { a: 12, b: 19, c: 20}
+/*const newObj = { a: 12, b: 19, c: 20 }
   let a,b,c,d,e;
-  ({
+  ({  //we start out bu wrapping the our value target in () jst so to avoid issue with block scoping
       a,
       b,
       c,
