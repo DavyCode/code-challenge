@@ -130,8 +130,7 @@ console.log('connected')
 // function my_sort (array) {
 //   let oddArray = [];
 //   let evenArray = [];
-//   let multipleOfTen = []
-//   let multipleOfElv = []
+
 //   array.forEach((num) => {
 //     if(num % 2 === 0) {
 //       evenArray.push(num)
@@ -144,6 +143,8 @@ console.log('connected')
 //   return oddArray.concat(evenArray);
 // }
 // my_sort([3,5,6,1,7])
+
+
 
 
 // Write a function power that accepts two arguments, a and b and calculates a raised to the power b.
@@ -159,3 +160,28 @@ console.log('connected')
 //   return result;
 // }
 // power(2,3)
+
+
+
+
+
+// Write a function called longest which will take a string of space-separated words and will return the longest one.
+// For example:
+// longest("This is Andela") => "Andela"
+
+// longest("A") => "A"
+
+// function longest(word) {
+//     var wordArr = word.split(' ');
+//     var longest= 0;
+//     var longestWord = '';
+
+//     for(var i = 0; i < wordArr.length; i += 1){
+//       if(longest < wordArr[i].length){
+//         longest = wordArr[i].length;
+//         longestWord = wordArr[i]
+//       }
+//     }
+//     return longestWord;
+// }
+// longest("hello from the other side")
