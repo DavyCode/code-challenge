@@ -114,3 +114,48 @@ console.log('connected')
 // remove_duplicates('a') => ('a', 0)
 
 // remove_duplicates('thelexash') => ('aehlstx', 2)
+
+
+
+
+// Write a function my_sort which takes in a list of numbers (positive integers).
+// The function should return a list of sorted numbers such that odd numbers come first and even numbers come last.
+// For example:
+// my_sort([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) => [1, 3, 5, 7, 9, 2, 4, 6, 8]
+// my_sort([1, 2]) => [1, 2]
+// my_sort([2, 1]) => [1, 2]
+// my_sort([3, 3, 4]) => [3, 3, 4]
+// my_sort([90, 45, 66]) => [45, 66, 90]
+
+// function my_sort (array) {
+//   let oddArray = [];
+//   let evenArray = [];
+//   let multipleOfTen = []
+//   let multipleOfElv = []
+//   array.forEach((num) => {
+//     if(num % 2 === 0) {
+//       evenArray.push(num)
+//     }else{
+//       oddArray.push(num)
+//     }
+//   })
+//   oddArray.sort()
+//   evenArray.sort()
+//   return oddArray.concat(evenArray);
+// }
+// my_sort([3,5,6,1,7])
+
+
+// Write a function power that accepts two arguments, a and b and calculates a raised to the power b.
+// Example:
+// power(2,3) = 8
+// Raise a TypeError with the message Argument must be integer or float if the inputs are anything other that ints or floats.
+
+// function power(a, b) {
+//   let result = a;
+//   for(let i = 1; i < b; i +=1){
+//        result *= a;
+//   }
+//   return result;
+// }
+// power(2,3)
