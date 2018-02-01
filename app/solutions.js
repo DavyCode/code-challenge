@@ -51,6 +51,46 @@ console.log('connected')
 // harmlessRansomeNote("is", "hey this is the first time im doing this")
 
 
+// PALINDROME
+
+// function is_Palindrome(word) {
+  // var wordArr = word.split('');
+  // var wordArrRev = word.split('').reverse() 
+
+  // var i = wordArr.length;
+  // if(i !== wordArrRev.length){ return false;}
+  //  while(i-=1){
+  //    if(wordArr[i] !== wordArrRev[i]){ return false}
+  //  }
+  //  return true;
+
+  // OR
+//   var wordStr = word;
+//   var reversedWord = word.split('').reverse().join('')
+//   if(wordStr === reversedWord){
+//     return true;
+//   }
+//   return false;
+// }
+// is_Palindrome('noon')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Write a program that checks if a word supplied as the argument is an Isogram. An Isogram is a word in which no letter occurs more than once.
 // Create a method called is_isogram that takes one argument, a word to test if it's an isogram. This method should return a tuple of the word and a boolean indicating whether it is an isogram.
