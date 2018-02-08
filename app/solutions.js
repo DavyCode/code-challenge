@@ -100,28 +100,28 @@ console.log('connected');
 // Expected result:
 //     ("abolishment", True)
 
-// function is_isogram (word){
-//     if(word === " " ){
-//       return  `${word},` + false;
-//     }
-//     if(typeof word !== "string"){
-//        return TypeError('Argument should be a string');
-//     }
-//     var wordArr = word.toLowerCase().split('')
-//     var wordObj = {};
-    
-//     wordArr.forEach(word => {
-//       if(!wordObj[word]){wordObj[word] = 0;}
-//         wordObj[word] += 1;
-//     });
+// function isIsogram(word){
+//   if(word === "" ){
+//   return  false;
+// }
+// if(typeof word !== "string"){
+//    return false;
+// }
+// var wordArr = word.toLowerCase().split('')
+// var wordObj = {};
 
-//     var isPossible = true;
-//     for(let key in wordObj) {
-//         if(wordObj[key] > 1){
-//           isPossible = false;        
-//         }
+// wordArr.forEach(word => {
+//   if(!wordObj[word]){wordObj[word] = 0;}
+//     wordObj[word] += 1;
+// });
+
+// var isPossible = true;
+// for(let key in wordObj) {
+//     if(wordObj[key] > 1){
+//       isPossible = false;        
 //     }
-//     return `${word}` + isPossible
+// }
+// return isPossible
 
 // }
 
@@ -214,7 +214,7 @@ console.log('connected');
 
 
 
-// Write a function called remove_duplicates which will take one argument called string. This string input will only have characters between a-z.
+// Write a function called remove_duplicates which will take one argument called string. This string input will only have characters between a-z. REGEX
 // The function should remove all repeated characters in the string and return a tuple with two values:
 // A new string with only unique, sorted characters.
 // The total number of duplicates dropped.
@@ -251,6 +251,23 @@ console.log('connected');
 
 
 
+// Test Results:
+// Data Structures
+// removeDuplicates('th#elex_ash?')
+// Should return type 'object'
+// expected '#?_aehlstx' to be an object
+
+// Return object should have a 'uniques' string property
+// expected undefined to be a string
+
+// Return object should have a 'duplicates' number property
+// expected undefined to be a number
+
+
+// 'uniques' should be 'aehlstx'
+// expected undefined to equal 'aehlstx'
+// 'duplicates' should be 2
+// expected undefined to equal 2
 
 
 
@@ -260,16 +277,122 @@ console.log('connected');
 
 
 
-// Write a function my_sort which takes in a list of numbers (positive integers).
-// The function should return a list of sorted numbers such that odd numbers come first and even numbers come last.
-// For example:
-// my_sort([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) => [1, 3, 5, 7, 9, 2, 4, 6, 8]
-// my_sort([1, 2]) => [1, 2]
-// my_sort([2, 1]) => [1, 2]
-// my_sort([3, 3, 4]) => [3, 3, 4]
-// my_sort([90, 45, 66]) => [45, 66, 90]
 
-// function my_sort (array) {
+
+
+
+
+
+
+
+
+
+
+
+// ==========================================================
+
+// JavaScript
+
+// The function should be called removeDuplicates and return an object literal containing a 'uniques' property, which should be the sorted input string but without any duplicates or special characters.
+// The returned object should also have a 'duplicates' propoerty which should represent the total number of duplicate characters dropped
+
+// For example
+
+// removeDuplicates('th#elex_ash?')
+
+// Returns
+
+//  {uniques: 'aehlstx', duplicates: 2}
+
+
+// function removeDuplicates(string) {
+//   let validStr = string.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '');
+//   let stringArr = validStr.split('');
+//   let strObj = {};
+//   let newArr = [];
+//   let sortedWord;
+//   let numDropped = 0;
+//   let resultObj = {};
+
+
+//   //filter characters
+//   stringArr.forEach(letter => {
+//     if(!strObj[letter]){
+//       strObj[letter] = 0;
+//     }
+//     strObj[letter] += 1;
+//   });
+
+//   // push characters to be sorted
+//   for(let i in strObj){
+//     newArr.push(i);
+//   };
+
+//   //sort characters into string
+//   sortedWord = newArr.sort().join('');
+
+//   //difference
+//   numDropped = stringArr.length - newArr.length;
+
+//   resultObj['uniques'] = sortedWord;
+//   resultObj['duplicates'] = numDropped;
+
+
+//   return resultObj;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// JavaScript
+
+// Write a mySort function which takes in an array integers, and should return an array of the inputed integers sorted such that the odd numbers come first and even numbers come last.
+
+// For exampl1e:
+
+// mySort( [90, 45, 66, 'bye', 100.5] )
+
+// should return
+
+// [45, 66, 90, 100]
+
+
+// mySort( [90, 45, 66] )
+// [90, 45, 66, 'bye', 100.5] should ignore random strings, treat input as integers, and return [45, 66, 90, 100]
+// expected [ 100.5, 45, 'bye', 66, 90 ] to deeply equal [ 45, 66, 90, 100 ]
+// mySort( [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] )
+// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] should return [1, 3, 5, 7, 9, 2, 4, 6, 8]
+// expected [ 1, 3, 5, 7, 9, 10, 2, 4, 6, 8 ] to deeply equal [ 1, 3, 5, 7, 9, 2, 4, 6, 8, 10 ]
+
+
+
+
+// function mySort (array) {
 //   let oddArray = [];
 //   let evenArray = [];
 
@@ -285,6 +408,48 @@ console.log('connected');
 //   return oddArray.concat(evenArray);
 // }
 // my_sort([3,5,6,1,7])
+
+
+
+// function mySort(nums) {
+// 	nums = nums.filter(isNumber);
+// 	for (let x = 0; x < nums.length; x++) {
+// 		nums[x] = parseInt(nums[x]);
+// 	}
+// 	let odd = nums.filter(isOdd);
+// 	let even = nums.filter(isEven);
+// 	return [].concat(odd.sort(sortNumber), even.sort(sortNumber));
+// }
+
+// function isNumber(element, index, array) {
+// 	return !isNaN(element);
+// }
+
+// function isOdd(element, index, array) {
+// 	return element % 2 !== 0 && typeof element === 'number';
+// }
+
+// function isEven(element, index, array) {
+// 	return element % 2 === 0 && typeof element === 'number';
+// }
+
+// function sortNumber(x, y) {
+// 	return x - y;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -310,23 +475,40 @@ console.log('connected');
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Write a function called longest which will take a string of space-separated words and will return the longest one.
 // For example:
 // longest("This is Andela") => "Andela"
 
 // longest("A") => "A"
 
-// function longest(word) {
-//     var wordArr = word.split(' ');
-//     var longest= 0;
-//     var longestWord = '';
+function longest(word) {
+    var wordArr = word.split(' ');
+    var longest= 0;
+    var longestWord = '';
 
-//     for(var i = 0; i < wordArr.length; i += 1){
-//       if(longest < wordArr[i].length){
-//         longest = wordArr[i].length;
-//         longestWord = wordArr[i]
-//       }
-//     }
-//     return longestWord;
-// }
+    for(var i = 0; i < wordArr.length; i += 1){
+      if(longest < wordArr[i].length){
+        longest = wordArr[i].length;
+        longestWord = wordArr[i]
+      }
+    }
+    return longestWord;
+}
 // longest("hello from the other side")
